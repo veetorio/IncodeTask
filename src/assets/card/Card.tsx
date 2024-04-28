@@ -9,6 +9,8 @@ import {
   list,
   useEditableControls,
 } from "@chakra-ui/react";
+import { FaRegEdit } from "react-icons/fa";
+import { RiDeleteBin6Line } from "react-icons/ri";
 import {
   Editable,
   EditableInput,
@@ -38,7 +40,7 @@ function Card(props: {
   const openModal = () => {
     onOpen();
   };
-  const edit = useRef<HTMLInputElement>()
+  const edit = useRef()
   const ableEdit = () => {
     isDisable ? onDisable() : onAble()
     alert(edit.current?.textContent)
@@ -85,6 +87,7 @@ function Card(props: {
                     onAble()
                   }}
                 >
+                  <RiDeleteBin6Line />
                 </Button>
               </ModalFooter>
             </ModalContent>
